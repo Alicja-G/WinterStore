@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201801062143193_InitalMigration.Designer.cs">
       <DependentUpon>201801062143193_InitalMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801062151259_addingCustomerToDatabase.cs" />
+    <Compile Include="Migrations\201801062151259_addingCustomerToDatabase.Designer.cs">
+      <DependentUpon>201801062151259_addingCustomerToDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -288,6 +292,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801062143193_InitalMigration.resx">
       <DependentUpon>201801062143193_InitalMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801062151259_addingCustomerToDatabase.resx">
+      <DependentUpon>201801062151259_addingCustomerToDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
