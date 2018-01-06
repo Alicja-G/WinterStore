@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WinterStore.Models
 {
@@ -35,6 +36,9 @@ namespace WinterStore.Models
 
         [Display(Name = "Number of days left to return")]
         public int NumberOfDaysLeftToReturn { get; set; }
+
+        [Required]
+        public ProductType ProductType { get; set; }
 
     }
 }
