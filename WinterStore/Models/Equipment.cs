@@ -4,21 +4,22 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using WinterStore.Models;
 
 namespace WinterStore.Models
 {
-    public class Product
+    public class Equipment
     {
         [Required]
-        public int ProductId { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        [MinLength(2, ErrorMessage = "Name of the product must be 2 characters or more")]
-        [Display(Name = "Name of the product")]
-        public string ProductName { get; set; }
+        [MinLength(2, ErrorMessage = "Name must be 2 characters or more")]
+        [Display(Name = "Name of the equipment")]
+        public string EquipmentName { get; set; }
 
-        [Display(Name = "Price for 1 day")]
-        public double PriceFor1DayOfRent { get; set; }
+        [Display(Name = "Price for 1 hour")]
+        public double PriceFor1HourOfRent { get; set; }
 
         [Required]
         [Display(Name = "Number available in stock")]
@@ -37,8 +38,12 @@ namespace WinterStore.Models
         [Display(Name = "Number of days left to return")]
         public int NumberOfDaysLeftToReturn { get; set; }
 
-        [Required]
-        public ProductType ProductType { get; set; }
+       
+        public EquipmentType EquipmentType { get; set; }
+
+       
+        
+
 
     }
 }

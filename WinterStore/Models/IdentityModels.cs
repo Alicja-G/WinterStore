@@ -26,8 +26,8 @@ namespace WinterStore.Models
         }
 
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Equipment> Equipment { get; set; }
+        public DbSet<EquipmentType> EquipmentTypes { get; set; }
 
         public static ApplicationDbContext Create()
         {
