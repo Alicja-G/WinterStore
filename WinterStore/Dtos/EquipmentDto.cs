@@ -32,6 +32,8 @@ namespace WinterStore.Dtos
 
         public int NumberOfDaysLeftToReturn { get; set; }
 
+        public int EquipmentTypeId { get; set; }
+
 
        
 

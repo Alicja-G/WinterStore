@@ -35,6 +35,12 @@ textarea {
     
 }
 
+#equipmentcontainer.container{
+    background-color: rgba(16, 31, 87, 0.6);
+    height: 360px;
+
+}
+
 #para1.col-sm-6{
     color: #ffffff;
    background-color:  rgba(169, 55, 55,.4);
