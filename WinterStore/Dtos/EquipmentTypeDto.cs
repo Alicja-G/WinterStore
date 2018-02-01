@@ -7,7 +7,7 @@ namespace WinterStore.Dtos
 {
     public class EquipmentTypeDto
     {
-        public int Id { get; set; }
+        public byte Id { get; set; }
         public string EquipmentTypeTypeOfSport { get; set; }
         public string EquipmentTypeAdultOrJunior { get; set; }
     }

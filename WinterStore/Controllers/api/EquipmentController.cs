@@ -19,22 +19,28 @@ namespace WinterStore.Controllers.api
             _context = new ApplicationDbContext();
         }
 
-        // GET /api/equipments
-        public IHttpActionResult GetEquipments(string query = null)
+        public IEnumerable<EquipmentDto> GetEquipment()
         {
-            var equipmentQuery = _context.Equipment
-                 .Include(c => c.EquipmentType);
-
-
-            if (!String.IsNullOrWhiteSpace(query))
-                equipmentQuery = equipmentQuery.Where(c => c.EquipmentName.Contains(query));
-
-            var equipmentDtos = equipmentQuery
+            return _context.Equipment
+                .Include(m => m.EquipmentType)
                 .ToList()
                 .Select(Mapper.Map<Equipment, EquipmentDto>);
-
-            return Ok(equipmentDtos);
         }
+
+        // GET /api/equipment
+        //public IHttpActionResult GetEquipment()
+        //{
+        //   var equipmentQuery = _context.Equipment
+        //        .Include(c => c.EquipmentType);
+
+     
+        //    var equipmentDtos = equipmentQuery
+        //        .ToList()
+        //        .Select(Mapper.Map<Equipment, EquipmentDto>);
+
+            
+        //    return Ok(equipmentDtos);
+        //}
 
        
 
@@ -50,7 +56,7 @@ namespace WinterStore.Controllers.api
         }
 
         // POST /api/equipments
-        //Check this 
+        //Check this later
         [HttpPost]
         public IHttpActionResult CreateEquipment(EquipmentDto equipmentDto)
         {
@@ -101,6 +107,6 @@ namespace WinterStore.Controllers.api
     }
 
 
-    //
+    //DataTables warning: table id=equipment - Requested unknown parameter 'equipmentType.equipmentTypeTypeOfSport' for row 0, column 1.
 }
 

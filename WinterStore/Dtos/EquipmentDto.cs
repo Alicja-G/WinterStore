@@ -9,7 +9,7 @@ namespace WinterStore.Dtos
     public class EquipmentDto
     {
         [Required]
-        public int Id { get; set; }
+        public byte Id { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "Name must be 2 characters or more")]
@@ -31,10 +31,11 @@ namespace WinterStore.Dtos
         public DateTime DateOfReturn { get; set; }
 
         public int NumberOfDaysLeftToReturn { get; set; }
+        
+        [Required]
+        public byte EquipmentTypeId { get; set; }
 
-        public int EquipmentTypeId { get; set; }
-
-
+        public EquipmentTypeDto EquipmentType { get; set; }
        
 
     }

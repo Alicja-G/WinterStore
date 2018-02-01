@@ -255,6 +255,14 @@
     <Compile Include="Migrations\201801270249074_SeedingEquipmentTypesWithValues.Designer.cs">
       <DependentUpon>201801270249074_SeedingEquipmentTypesWithValues.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801310032123_RemovingConBetweenEqAndEqType.cs" />
+    <Compile Include="Migrations\201801310032123_RemovingConBetweenEqAndEqType.Designer.cs">
+      <DependentUpon>201801310032123_RemovingConBetweenEqAndEqType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801310038329_CorrectingRelBetweenEqAndEqTypes.cs" />
+    <Compile Include="Migrations\201801310038329_CorrectingRelBetweenEqAndEqTypes.Designer.cs">
+      <DependentUpon>201801310038329_CorrectingRelBetweenEqAndEqTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -548,6 +556,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801270249074_SeedingEquipmentTypesWithValues.resx">
       <DependentUpon>201801270249074_SeedingEquipmentTypesWithValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801310032123_RemovingConBetweenEqAndEqType.resx">
+      <DependentUpon>201801310032123_RemovingConBetweenEqAndEqType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801310038329_CorrectingRelBetweenEqAndEqTypes.resx">
+      <DependentUpon>201801310038329_CorrectingRelBetweenEqAndEqTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

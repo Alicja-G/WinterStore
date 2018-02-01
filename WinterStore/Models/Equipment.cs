@@ -11,7 +11,7 @@ namespace WinterStore.Models
     public class Equipment
     {
         [Required]
-        public int Id { get; set; }
+        public byte Id { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "Name must be 2 characters or more")]
@@ -38,8 +38,13 @@ namespace WinterStore.Models
         [Display(Name = "Number of days left to return")]
         public int NumberOfDaysLeftToReturn { get; set; }
 
-       
         public EquipmentType EquipmentType { get; set; }
+
+        [Required]
+        [ForeignKey("EquipmentType")]
+        public byte EquipmentTypeId { get; set; }
+       
+        
 
        
         
