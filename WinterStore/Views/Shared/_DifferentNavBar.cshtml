@@ -8,16 +8,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Winter Store</a>
+            @Html.ActionLink("Winter Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
 
-        <!-- Grupowanie elementów menu w celu lepszego wyświetlania na urządzeniach moblinych -->
+      
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Equipment for rent <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">All products</a></li>
+                        <li>@Html.ActionLink("All equipment", "Index", "Equipment")</li>
                         <li class="divider"></li>
                         <li><a href="#">Skiing</a></li>
                         <li><a href="#">Snowboard</a></li>
@@ -26,9 +26,9 @@
                         <li><a href="#">Junior section</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Our store</a></li>
-                <li><a href="#">Customers</a></li>
-                <li><a href="#">Rentals registry</a></li>
+                <li>@Html.ActionLink("Our store", "Index", "Store")</li>
+                <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                <li>@Html.ActionLink("Rental Registry", "Index", "Rentals")</li>
                 
                
                 </ul>

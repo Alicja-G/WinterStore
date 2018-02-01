@@ -214,10 +214,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\api\CustomersController.cs" />
     <Compile Include="Controllers\api\EquipmentController.cs" />
+    <Compile Include="Controllers\api\RentalsController.cs" />
+    <Compile Include="Controllers\api\StoreController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RentalsController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Dtos\EquipmentDto.cs" />
     <Compile Include="Dtos\EquipmentTypeDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -517,12 +523,13 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_DifferentNavBar.cshtml" />
     <Content Include="Views\Equipment\index.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Rentals\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Viewmodels\" />
-    <Folder Include="Views\Customers\" />
-    <Folder Include="Views\Rentals\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
