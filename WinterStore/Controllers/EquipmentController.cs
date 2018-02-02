@@ -7,6 +7,7 @@ using WinterStore.Models;
 
 namespace WinterStore.Controllers
 {
+    [AllowAnonymous]
     public class EquipmentController : Controller
     {
         private ApplicationDbContext _context;
@@ -24,14 +25,14 @@ namespace WinterStore.Controllers
         // GET: Equipment
         public ActionResult Index()
         {
-            return View("ReadOnlyList");
+            if (User.IsInRole(RoleName.Admin))
+                return View("ListWithAllOptions");
+
+            else
+
+                return View("ReadOnlyList");
         }
         
-        public ActionResult ViewList()
-        {
-
-            //TO DO
-            return View("index");
-        }
+        
     }
 }

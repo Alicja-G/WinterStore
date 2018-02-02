@@ -62,3 +62,12 @@ textarea {
     color: #ffffff;
     padding-bottom: 20px;
 }
+
+
+/*---------------DataTablesTable-----------*/
+#equipment.table{
+    color: #ffffff;
+    background-color: #000000;
+
+}
+

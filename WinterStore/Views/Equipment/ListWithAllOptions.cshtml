@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WinterStore.Models.Equipment>
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h1>ALL EQUIPMENT:</h1>
+
+
+
+<div class ="container" id="equipmentcontainer">
+<table id="equipment" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Equipment</th>
+            <th>Type</th>
+            <th>Age recomendation</th>
+            <th>Number in stock</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+    <p>
+        @Html.ActionLink("Add equipment", "New", "Equipment", null, new { @class = "btn btn-primary" })
+    </p>
+    </div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#equipment").DataTable({
+                ajax: {
+                    url: "/api/equipment",
+                    dataSrc: ""
+                },
+                columns: [
+                    { data: "equipmentName" },
+                    { data: "equipmentType.equipmentTypeTypeOfSport" },
+                    { data: "equipmentType.equipmentTypeAdultOrJunior" },
+                    { data: "numberInStock" },
+                   {
+                       data: "id",
+                       render: function (data) {
+                           return "<button class='btn-link js-delete' data-equipment-id=" + data + ">Delete</button>";
+                       }
+                   }
+                        ]
+            });
+        });
+
+        $("#equipment").on("click", ".js-delete", function () {
+            var button = $(this);
+
+            bootbox.confirm("Are you sure you want to delete this equipment?", function (result) {
+                if (result) {
+                    $.ajax({
+                        url: "/api/equipment/" + button.attr("data-equipment-id"),
+                        method: "DELETE",
+                        success: function () {
+                            table.row(button.parents("tr")).remove().draw();
+                        }
+                    });
+                }
+            });
+        });
+        
+
+        </script>
+}
+
+
+
+

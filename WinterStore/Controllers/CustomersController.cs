@@ -11,6 +11,7 @@ namespace WinterStore.Controllers
         // GET: Customer
         public ActionResult Index()
         {
+
             return View("ReadOnlyList");
         }
     }
