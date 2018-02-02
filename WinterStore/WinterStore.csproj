@@ -285,6 +285,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -395,10 +396,15 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="images\background1.jpg" />
+    <Content Include="images\background2.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\osrodek.jpg" />
+    <Content Include="images\skiing.jpg" />
+    <Content Include="images\snowboarders-2089706_960_720.jpg" />
     <Content Include="images\snowy-mountain-background.jpg" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -532,7 +538,6 @@
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Rentals\Index.cshtml" />
     <Content Include="Views\Equipment\ListWithAllOptions.cshtml" />
-    <Content Include="Views\Shared\_DifNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

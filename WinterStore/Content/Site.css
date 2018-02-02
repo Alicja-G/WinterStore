@@ -1,7 +1,7 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-image: url(/images/snowy-mountain-background.jpg);
+    padding-top: 3%;
+    padding-bottom: 0%;
+    background-image: url(/images/background1.jpg);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -26,7 +26,7 @@ textarea {
 
 #index.container{
     
-    height: 740px;
+    height: 80%;
      border-style: solid;
      border-width: thin;
    border-color: #000000;
@@ -35,25 +35,29 @@ textarea {
     
 }
 
-#equipmentcontainer.container{
-    background-color: rgba(16, 31, 87, 0.6);
-    height: 360px;
+
+
+#para1.col-sm-12{
+    color: #ffffff;
+   background-color: rgba(0, 0, 0, .8);
+   text-align: center;
+  height: 10%; 
 
 }
 
-#para1.col-sm-6{
-    color: #ffffff;
-   background-color:  rgba(169, 55, 55,.4);
-   
-  
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 400px;
+#col2.col-sm-2{
+    background-color: rgba(0, 0, 0, .8);
+    height: 300px;
+}
+#carousel.col-sm-8{
+    height: 300px; 
+      background-color: rgba(0, 0, 0, .8);
 
 }
 
 .container{
-    padding-top: 50px;
+    padding-top: 5%;
+    padding-bottom: 5%
 }
 
 
@@ -61,8 +65,15 @@ textarea {
     text-align: center;
     color: #ffffff;
     padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, .8);
+
 }
 
+#HomePageTable.table{
+  background-color: #ff0000;
+  width: 100%;
+  border: 1px solid white; 
+}
 
 /*---------------DataTablesTable-----------*/
 #equipment.table{
@@ -71,3 +82,20 @@ textarea {
 
 }
 
+
+/*----------------NAVBAR-------------------*/
+
+.navbar-inverse
+   {
+       background-color: #000000;
+       border-color: rgb(40, 36, 36);
+
+   }
+
+/*-------------EQUIPMENT LIST VIEW--------*/
+
+#equipmentcontainer.container{
+     background-color: rgba(0, 0, 0, .5);
+    height: 80%;
+
+}
