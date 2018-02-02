@@ -24,7 +24,7 @@ namespace WinterStore.Controllers
         // GET: Equipment
         public ActionResult Index()
         {
-            return View();
+            return View("ReadOnlyList");
         }
         
         public ActionResult ViewList()
