@@ -11,7 +11,7 @@ namespace WinterStore.Models
     public class Equipment
     {
         [Required]
-        public byte Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "Name must be 2 characters or more")]
@@ -25,18 +25,14 @@ namespace WinterStore.Models
         [Display(Name = "Number available in stock")]
         public byte NumberInStock { get; set; }
 
-        [Required]
-        [Display(Name = "Is it currently rented")]
-        public bool IsCurrentlyRented { get; set; }
+       
 
         [Display(Name = "Date of rent")]
-        public DateTime DateOfRent { get; set; }
+        public DateTime? DateOfRent { get; set; }
 
         [Display(Name = "Date of return")]
-        public DateTime DateOfReturn { get; set; }
+        public DateTime? DateOfReturn { get; set; }
 
-        [Display(Name = "Number of days left to return")]
-        public int NumberOfDaysLeftToReturn { get; set; }
 
         public EquipmentType EquipmentType { get; set; }
 

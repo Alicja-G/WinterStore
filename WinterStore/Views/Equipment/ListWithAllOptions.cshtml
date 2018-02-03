@@ -37,7 +37,11 @@
                     dataSrc: ""
                 },
                 columns: [
-                    { data: "equipmentName" },
+                    { data: "equipmentName",
+                    render: function (data, type, equipment)
+                    {
+                        return "<a href=/equipment/edit/" + equipment.id + ">" + equipment.equipmentName + "</a>";
+                    }},
                     { data: "equipmentType.equipmentTypeTypeOfSport" },
                     { data: "equipmentType.equipmentTypeAdultOrJunior" },
                     { data: "numberInStock" },

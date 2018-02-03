@@ -273,6 +273,18 @@
     <Compile Include="Migrations\201802020043143_SeedUsers.Designer.cs">
       <DependentUpon>201802020043143_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802021806134_RemovingUnnecessaryPropertiesIsRented.cs" />
+    <Compile Include="Migrations\201802021806134_RemovingUnnecessaryPropertiesIsRented.Designer.cs">
+      <DependentUpon>201802021806134_RemovingUnnecessaryPropertiesIsRented.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802021831553_nullableDates.cs" />
+    <Compile Include="Migrations\201802021831553_nullableDates.Designer.cs">
+      <DependentUpon>201802021831553_nullableDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802030337139_ChangingPropertyEquipmentIdType.cs" />
+    <Compile Include="Migrations\201802030337139_ChangingPropertyEquipmentIdType.Designer.cs">
+      <DependentUpon>201802030337139_ChangingPropertyEquipmentIdType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -283,6 +295,7 @@
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Viewmodels\AddOrEditEquipmentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-darkly.css" />
@@ -538,10 +551,10 @@
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Rentals\Index.cshtml" />
     <Content Include="Views\Equipment\ListWithAllOptions.cshtml" />
+    <Content Include="Views\Equipment\AddOrEditEquipment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Viewmodels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -584,6 +597,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802020043143_SeedUsers.resx">
       <DependentUpon>201802020043143_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802021806134_RemovingUnnecessaryPropertiesIsRented.resx">
+      <DependentUpon>201802021806134_RemovingUnnecessaryPropertiesIsRented.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802021831553_nullableDates.resx">
+      <DependentUpon>201802021831553_nullableDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802030337139_ChangingPropertyEquipmentIdType.resx">
+      <DependentUpon>201802030337139_ChangingPropertyEquipmentIdType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

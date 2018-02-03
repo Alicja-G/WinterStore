@@ -4,7 +4,7 @@
     ViewBag.Title = "index";
 }
 
-<h1>All available equipment:</h1>
+<h1 id="equipmentForm">ALL AVAILABLE EQUIPMENT</h1>
 
 <div class ="container" id="equipmentcontainer">
 <table id="equipment" class="table table-bordered table-hover">
@@ -12,7 +12,8 @@
         <tr>
             <th>Equipment</th>
             <th>Type</th>
-            <th>Age recomendation</th>
+            <th>Age recommendation</th>
+            <th>Price for 1 hour</th>
         </tr>
     </thead>
     <tbody></tbody>
@@ -31,12 +32,20 @@
                 columns: [
                     { data: "equipmentName" },
                     { data: "equipmentType.equipmentTypeTypeOfSport" },
-                    { data: "equipmentType.equipmentTypeAdultOrJunior"}
-                           ]
+                    { data: "equipmentType.equipmentTypeAdultOrJunior" },
+                     {
+                         data: "priceFor1HourOfRent",
+                         render: function (data) {
+                             return data + " PLN";
+                         }
+                     }
+                ]
+
+
             });
         });
         </script>
-}
+    }
 
 
 
