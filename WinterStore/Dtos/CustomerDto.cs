@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WinterStore.Models
+namespace WinterStore.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
         public int CustomerId { get; set; }
 

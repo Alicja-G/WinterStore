@@ -12,7 +12,11 @@ namespace WinterStore.Controllers
         public ActionResult Index()
         {
 
-            return View("ReadOnlyList");
+            return View("Index");
         }
+
+
+
+
     }
 }

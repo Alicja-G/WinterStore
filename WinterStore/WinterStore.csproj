@@ -224,6 +224,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Dtos\CustomerDto.cs" />
     <Compile Include="Dtos\EquipmentDto.cs" />
     <Compile Include="Dtos\EquipmentTypeDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -284,6 +285,10 @@
     <Compile Include="Migrations\201802030337139_ChangingPropertyEquipmentIdType.cs" />
     <Compile Include="Migrations\201802030337139_ChangingPropertyEquipmentIdType.Designer.cs">
       <DependentUpon>201802030337139_ChangingPropertyEquipmentIdType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802030641056_RequiredCustomerNameProperty.cs" />
+    <Compile Include="Migrations\201802030641056_RequiredCustomerNameProperty.Designer.cs">
+      <DependentUpon>201802030641056_RequiredCustomerNameProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -606,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802030337139_ChangingPropertyEquipmentIdType.resx">
       <DependentUpon>201802030337139_ChangingPropertyEquipmentIdType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802030641056_RequiredCustomerNameProperty.resx">
+      <DependentUpon>201802030641056_RequiredCustomerNameProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
