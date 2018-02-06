@@ -290,6 +290,10 @@
     <Compile Include="Migrations\201802030641056_RequiredCustomerNameProperty.Designer.cs">
       <DependentUpon>201802030641056_RequiredCustomerNameProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802060215210_changingDisplayNameAndValidationForCustomerModel.cs" />
+    <Compile Include="Migrations\201802060215210_changingDisplayNameAndValidationForCustomerModel.Designer.cs">
+      <DependentUpon>201802060215210_changingDisplayNameAndValidationForCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -615,6 +619,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802030641056_RequiredCustomerNameProperty.resx">
       <DependentUpon>201802030641056_RequiredCustomerNameProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802060215210_changingDisplayNameAndValidationForCustomerModel.resx">
+      <DependentUpon>201802060215210_changingDisplayNameAndValidationForCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

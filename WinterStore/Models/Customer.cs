@@ -11,6 +11,9 @@ namespace WinterStore.Models
         public int CustomerId { get; set; }
 
         [Required]
+        [Display(Name ="Name of the customer")]
+        [StringLength(255)]
+        [MinLength(3, ErrorMessage = "Name must be 3 or more characters long.")]
         public string CustomerName { get; set; }
 
     }

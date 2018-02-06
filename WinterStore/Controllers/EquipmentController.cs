@@ -77,7 +77,7 @@ namespace WinterStore.Controllers
 
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Equipment");
+            return RedirectToAction("ListWithAllOptions", "Equipment");
         }
 
 

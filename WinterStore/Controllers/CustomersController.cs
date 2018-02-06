@@ -34,7 +34,7 @@ namespace WinterStore.Controllers
         {
             var customer = new Customer();
 
-            return View("Index", customer);
+            return View("AddOrEditCustomer", customer);
         }
 
         [HttpPost]
@@ -48,7 +48,7 @@ namespace WinterStore.Controllers
                     CustomerName = customer.CustomerName
                 };
 
-                return View("Index", newCustomer);
+                return View("ListWithAllOptions", newCustomer);
             }
 
             if (customer.CustomerId == 0)
@@ -79,7 +79,7 @@ namespace WinterStore.Controllers
                 CustomerName = customer.CustomerName
             };
 
-            return View("Index", customer);
+            return View("AddOrEditCustomer", customer);
         }
     }
 
