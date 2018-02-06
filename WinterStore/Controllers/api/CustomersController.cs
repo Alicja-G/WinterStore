@@ -7,6 +7,7 @@ using System.Web.Http;
 using WinterStore.Models;
 using WinterStore.Dtos;
 using AutoMapper;
+using System.Data.Entity;
 
 namespace WinterStore.Controllers.api
 {
@@ -20,20 +21,13 @@ namespace WinterStore.Controllers.api
         }
 
         // GET /api/customers
-        public IHttpActionResult GetCustomers(string query = null)
+        public IEnumerable<CustomerDto> GetCustomers()
         {
-            var customersQuery = _context.Customers;
-
-
-            if (!String.IsNullOrWhiteSpace(query))
-                customersQuery = customersQuery.Where(c => c.CustomerName.Contains(query));
-
-            var customerDtos = customersQuery
+            return _context.Customers
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
-
-            return Ok(customerDtos);
         }
+    
 
         // GET /api/customers/1
         public IHttpActionResult GetCustomer(int id)

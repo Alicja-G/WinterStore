@@ -27,21 +27,6 @@ namespace WinterStore.Controllers.api
                 .Select(Mapper.Map<Equipment, EquipmentDto>);
         }
 
-        // GET /api/equipment
-        //public IHttpActionResult GetEquipment()
-        //{
-        //   var equipmentQuery = _context.Equipment
-        //        .Include(c => c.EquipmentType);
-
-     
-        //    var equipmentDtos = equipmentQuery
-        //        .ToList()
-        //        .Select(Mapper.Map<Equipment, EquipmentDto>);
-
-            
-        //    return Ok(equipmentDtos);
-        //}
-
        
 
         // GET /api/equipment/1
@@ -56,7 +41,6 @@ namespace WinterStore.Controllers.api
         }
 
         // POST /api/equipments
-        //Check this later
         [HttpPost]
         public IHttpActionResult CreateEquipment(EquipmentDto equipmentDto)
         {

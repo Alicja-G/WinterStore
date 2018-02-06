@@ -552,11 +552,12 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_DifferentNavBar.cshtml" />
     <Content Include="Views\Equipment\ReadOnlyList.cshtml" />
-    <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Rentals\Index.cshtml" />
     <Content Include="Views\Equipment\ListWithAllOptions.cshtml" />
     <Content Include="Views\Equipment\AddOrEditEquipment.cshtml" />
+    <Content Include="Views\Customers\ListWithAllOptions.cshtml" />
+    <Content Include="Views\Customers\AddOrEditCustomer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
