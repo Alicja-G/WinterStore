@@ -23,6 +23,7 @@ namespace WinterStore.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Equipment> Equipment { get; set; }
         public DbSet<EquipmentType> EquipmentTypes { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

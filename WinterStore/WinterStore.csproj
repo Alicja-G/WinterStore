@@ -216,7 +216,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\api\CustomersController.cs" />
     <Compile Include="Controllers\api\EquipmentController.cs" />
-    <Compile Include="Controllers\api\RentalsController.cs" />
+    <Compile Include="Controllers\api\NewRentalsController.cs" />
     <Compile Include="Controllers\api\StoreController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
@@ -227,6 +227,7 @@
     <Compile Include="Dtos\CustomerDto.cs" />
     <Compile Include="Dtos\EquipmentDto.cs" />
     <Compile Include="Dtos\EquipmentTypeDto.cs" />
+    <Compile Include="Dtos\NewRentalDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -294,6 +295,10 @@
     <Compile Include="Migrations\201802060215210_changingDisplayNameAndValidationForCustomerModel.Designer.cs">
       <DependentUpon>201802060215210_changingDisplayNameAndValidationForCustomerModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802060259546_AddRentalsModel.cs" />
+    <Compile Include="Migrations\201802060259546_AddRentalsModel.Designer.cs">
+      <DependentUpon>201802060259546_AddRentalsModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -301,6 +306,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\EquipmentType.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -562,6 +568,7 @@
     <Content Include="Views\Equipment\AddOrEditEquipment.cshtml" />
     <Content Include="Views\Customers\ListWithAllOptions.cshtml" />
     <Content Include="Views\Customers\AddOrEditCustomer.cshtml" />
+    <Content Include="Views\Rentals\AddRental.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -622,6 +629,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802060215210_changingDisplayNameAndValidationForCustomerModel.resx">
       <DependentUpon>201802060215210_changingDisplayNameAndValidationForCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802060259546_AddRentalsModel.resx">
+      <DependentUpon>201802060259546_AddRentalsModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
