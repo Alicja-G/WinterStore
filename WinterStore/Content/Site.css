@@ -1,6 +1,7 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 3%;
+    padding-bottom: 0%;
+    background-image: url(/images/background1.jpg);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,96 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.h1{
+
+    color: #ffffff;
+}
+
+#index.container{
+    
+    height: 80%;
+     border-style: solid;
+     border-width: thin;
+   border-color: #000000;
+   background-color: rgba(0, 0, 0, .5);
+   
+    
+}
+
+
+
+#para1.col-sm-12{
+    color: #ffffff;
+   background-color: rgba(0, 0, 0, .8);
+   text-align: center;
+  height: 10%; 
+
+}
+
+#col2.col-sm-2{
+    background-color: rgba(0, 0, 0, .8);
+    height: 300px;
+}
+#carousel.col-sm-8{
+    height: 300px; 
+      background-color: rgba(0, 0, 0, .8);
+
+}
+
+.container{
+    padding-top: 5%;
+    padding-bottom: 5%
+}
+
+
+#header.col-sm-12{
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
+#homepage{
+  width: 100%;
+  font-size: larger;
+  border: 1px solid white; 
+}
+
+/*---------------DataTablesTable-----------*/
+#equipment.table{
+    color: #ffffff;
+    background-color: #000000;
+
+}
+
+#customers.table{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+
+/*----------------NAVBAR-------------------*/
+
+.navbar-inverse
+   {
+       background-color: #000000;
+       border-color: rgb(40, 36, 36);
+
+   }
+
+/*-------------EQUIPMENT LIST VIEW--------*/
+
+#equipmentcontainer.container{
+     background-color: rgba(0, 0, 0, .5);
+    height: 80%;
+
+}
+
+#equipmentForm{
+    color: #ffffff;
+
+
 }

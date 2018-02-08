@@ -2,30 +2,84 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="container" id="index">
+    
+    <div class="row">
+        <div class="col-sm-12" id="header">
+            <h1>
+                Welcome to the Winter Store App! 
+            </h1>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-sm-12" id="para1">
+           <p>
+               @*  "<a href='/movies/edit/" + movie.id + "'>" + movie.name + "</a>"; *@
+               Search for your @Html.ActionLink("Equipment", "Index", "Equipment") here.
+     </p>
+            <p>Would you like to go:</p>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+           <table align="center" cellpadding="5" cellspacing="5" height="100" id="homepage">
+               <tr>
+                   <td colspan="3">SNOWBOARDING?</td>
+                   <td colspan="3">SKIING?</td>
+               </tr>
+               <tr>
+                   <td colspan="2">ADULT SECTION</td>
+                   <td colspan="2">JUNIOR SECTION</td>
+                   <td colspan="2">UNIVERSAL EQUIPMENT</td>
+               </tr>
+               
+
+
+
+           </table>   
+           
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+        <div class="row">
+            <div class="col-sm-2" id="col2"> </div>
+                <div class="col-sm-8" id="carousel">
+
+                   @* carousel start *@
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="~/images/skiing.jpg" alt="Los Angeles">
+                            </div>
+
+                            <div class="item">
+                                <img src="~/images/snowboarders-2089706_960_720.jpg" alt="Chicago">
+                            </div>
+
+                            <div class="item">
+                                <img src="~/images/osrodek.jpg" alt="New York">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    
+                    @* carousel end *@ 
+                </div>
+            <div class="col-sm-2" id="col2"></div>
+
+               </div>
 </div>
+    

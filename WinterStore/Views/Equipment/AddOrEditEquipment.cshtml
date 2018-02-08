@@ -1,0 +1,64 @@
+﻿@model WinterStore.Viewmodels.AddOrEditEquipmentViewModel
+
+@{
+    ViewBag.Title = "AddOrEditEquipment";
+}
+
+
+<div class="container" id="equipmentcontainer">
+    <h2> @Model.Title </h2>
+    @using (Html.BeginForm("Save", "Equipment"))
+    {
+        @Html.ValidationSummary(true, "Please fix the following errors.")
+        <div class="form-group">
+            @Html.LabelFor(m => m.EquipmentName)
+            @Html.TextBoxFor(m => m.EquipmentName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.EquipmentName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.EquipmentTypeId)
+            @Html.DropDownListFor(m => m.EquipmentTypeId, new SelectList(Model.EquipmentTypes, "Id", "EquipmentTypeTypeOfSport"), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.EquipmentTypeId)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.EquipmentTypeId)
+            @Html.DropDownListFor(m => m.EquipmentTypeId, new SelectList(Model.EquipmentTypes, "Id", "EquipmentTypeAdultOrJunior"), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.EquipmentTypeId)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PriceFor1HourOfRent)
+            @Html.TextBoxFor(m => m.PriceFor1HourOfRent, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.NumberInStock)
+            @Html.TextBoxFor(m => m.NumberInStock, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.DateOfRent)
+            @Html.TextBoxFor(m => m.DateOfRent, "{0:d MMM yyyy}", new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.DateOfReturn)
+            @Html.TextBoxFor(m => m.DateOfReturn, "{0:d MMM yyyy}", new { @class = "form-control" })
+        </div>
+
+
+
+
+        @Html.HiddenFor(m => m.Id)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+    </div>
+
+
+    @section scripts
+{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+

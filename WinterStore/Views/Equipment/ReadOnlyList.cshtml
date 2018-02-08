@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WinterStore.Models.Equipment>
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h1 id="equipmentForm">ALL AVAILABLE EQUIPMENT</h1>
+
+<div class ="container" id="equipmentcontainer">
+<table id="equipment" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Equipment</th>
+            <th>Type</th>
+            <th>Age recommendation</th>
+            <th>Price for 1 hour</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+    </div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#equipment").DataTable({
+                ajax: {
+                    url: "/api/equipment",
+                    dataSrc: ""
+                },
+                columns: [
+                    { data: "equipmentName" },
+                    { data: "equipmentType.equipmentTypeTypeOfSport" },
+                    { data: "equipmentType.equipmentTypeAdultOrJunior" },
+                     {
+                         data: "priceFor1HourOfRent",
+                         render: function (data) {
+                             return data + " PLN";
+                         }
+                     }
+                ]
+
+
+            });
+        });
+        </script>
+    }
+
+
+
+

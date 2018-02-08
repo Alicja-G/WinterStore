@@ -1,0 +1,34 @@
+﻿@model WinterStore.Models.Customer
+
+@{
+    ViewBag.Title = "AddOrEditCustomer";
+}
+
+
+<div class="container" id="equipmentcontainer">
+    @using (Html.BeginForm("Save", "Customers"))
+    {
+        @Html.ValidationSummary(true, "Please fix the following errors.")
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.CustomerName)
+            @Html.TextBoxFor(m => m.CustomerName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CustomerName)
+        </div>
+
+
+
+        @Html.HiddenFor(m => m.CustomerId)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+</div>
+
+    @section scripts
+{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+

@@ -1,0 +1,37 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Grupowanie "marki" i przycisku rozwijania mobilnego menu -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Rozwiń nawigację</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Winter Rental Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+
+      
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="navbar">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Equipment for rent <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@Html.ActionLink("All equipment", "Index", "Equipment")</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Skiing", "Skiing", "Equipment")</li>
+                        <li>@Html.ActionLink("Snowboard", "Snowboard", "Equipment")</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Adult Section", "Adult", "Equipment")</li>
+                        <li>@Html.ActionLink("Junior Section", "Junior", "Equipment")</li>
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                <li>@Html.ActionLink("Rental Registry", "Index", "Rentals")</li>
+                
+               
+                </ul>
+                @Html.Partial("_LoginPartial")
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
