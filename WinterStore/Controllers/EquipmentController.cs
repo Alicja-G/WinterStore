@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WinterStore.Models;
 using WinterStore.Viewmodels;
+using System.Data.Entity;
 
 namespace WinterStore.Controllers
 {
@@ -33,6 +34,37 @@ namespace WinterStore.Controllers
 
                 return View("ReadOnlyList");
         }
+
+        //Not implemented yet
+        public JsonResult GetSnowboard()
+        {
+            IQueryable<Equipment> snowboardEquipment = _context.Equipment
+                .Include(m => m.EquipmentType)
+                .Where(m => m.EquipmentType.EquipmentTypeTypeOfSport == "Snowboard");
+                
+
+
+            return Json(snowboardEquipment, JsonRequestBehavior.AllowGet);
+        }
+
+        //Not implemented yet
+        public JsonResult GetSkiing()
+        {
+            return Json();
+        }
+
+        //Not implemented yet
+        public JsonResult GetAdults()
+        {
+            return Json();
+        }
+
+        //Not implemented yet
+        public JsonResult GetJunior()
+        {
+            return Json();
+        }
+
 
 
         public ViewResult New()

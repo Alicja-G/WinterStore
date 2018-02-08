@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Winter Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Winter Rental Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
         </div>
 
       
@@ -19,14 +19,13 @@
                     <ul class="dropdown-menu" role="menu">
                         <li>@Html.ActionLink("All equipment", "Index", "Equipment")</li>
                         <li class="divider"></li>
-                        <li><a href="#">Skiing</a></li>
-                        <li><a href="#">Snowboard</a></li>
+                        <li>@Html.ActionLink("Skiing", "Skiing", "Equipment")</li>
+                        <li>@Html.ActionLink("Snowboard", "Snowboard", "Equipment")</li>
                         <li class="divider"></li>
-                        <li><a href="#">Adult section</a></li>
-                        <li><a href="#">Junior section</a></li>
+                        <li>@Html.ActionLink("Adult Section", "Adult", "Equipment")</li>
+                        <li>@Html.ActionLink("Junior Section", "Junior", "Equipment")</li>
                     </ul>
                 </li>
-                <li>@Html.ActionLink("Our store", "Index", "Store")</li>
                 <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
                 <li>@Html.ActionLink("Rental Registry", "Index", "Rentals")</li>
                 
