@@ -19,15 +19,30 @@ namespace WinterStore.Controllers.api
             _context = new ApplicationDbContext();
         }
 
-        public IEnumerable<EquipmentDto> GetEquipment()
+        //public IEnumerable<EquipmentDto> GetEquipment()
+        //{
+        //    return _context.Equipment
+        //        .Include(m => m.EquipmentType)
+        //        .ToList()
+        //        .Select(Mapper.Map<Equipment, EquipmentDto>);
+        //}
+
+        public IHttpActionResult GetEquipment(string query = null)
         {
-            return _context.Equipment
-                .Include(m => m.EquipmentType)
+            var equipmentQuery = _context.Equipment
+                .Include(c => c.EquipmentType)
+                .Where(c => c.NumberAvailable > 0);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                equipmentQuery = equipmentQuery.Where(c => c.EquipmentName.Contains(query));
+
+            var equipmentDtos = equipmentQuery
                 .ToList()
                 .Select(Mapper.Map<Equipment, EquipmentDto>);
+
+            return Ok(equipmentDtos);
         }
 
-       
 
         // GET /api/equipment/1
         public IHttpActionResult GetEquipment(int id)

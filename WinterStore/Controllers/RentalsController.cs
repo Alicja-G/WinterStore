@@ -13,5 +13,10 @@ namespace WinterStore.Controllers
         {
             return View("AddRental");
         }
+
+        public ActionResult Index()
+        {
+            return View("AddRental");
+        }
     }
 }

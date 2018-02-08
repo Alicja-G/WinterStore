@@ -25,7 +25,8 @@ namespace WinterStore.Models
         [Display(Name = "Number available in stock")]
         public byte NumberInStock { get; set; }
 
-       
+        public byte NumberAvailable { get; set; }       
+
 
         [Display(Name = "Date of rent")]
         public DateTime? DateOfRent { get; set; }

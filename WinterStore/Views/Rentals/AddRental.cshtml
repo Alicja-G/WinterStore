@@ -13,7 +13,7 @@
     <div class="form-group">
         <label>Equipment</label>
         <div class="tt-container">
-            <input id="equ" name="equ" data-rule-atLeastOneMovie="true" type="text" value="" class="form-control" />
+            <input id="equ" name="equ" data-rule-atLeastOneEquipment="true" type="text" value="" class="form-control" />
         </div>
     </div>
     <div class="row">
@@ -34,7 +34,7 @@
             };
 
             var customers = new Bloodhound({
-                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('customerName'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
                 remote: {
                     url: '/api/customers?query=%QUERY',
@@ -47,14 +47,14 @@
                 highlight: true
             }, {
                 name: 'customers',
-                display: 'name',
+                display: 'customerName',
                 source: customers
             }).on("typeahead:select", function(e, customer) {
-                vm.customerId = customer.id;
+                vm.customerId = customer.Id;
             });
 
             var equipment = new Bloodhound({
-                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('equipmentName'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
                 remote: {
                     url: '/api/equipment?query=%QUERY',
@@ -67,21 +67,22 @@
                 highlight: true
             }, {
                 name: 'equipment',
-                display: 'name',
+                display: 'equipmentName',
                 source: equipment
             }).on("typeahead:select", function (e, equipment) {
-                $("#equipment").append("<li class='list-group-item'>" + ecu.name + "</li>");
+                $("#equipment").append("<li class='list-group-item'>" + equipment.equipmentName + "</li>");
 
-                $("#equ").typeahead("val", ""); //correct it
+                $("#equ").typeahead("val", ""); 
 
-                vm.equipmentIds.push(equ.id);
+                vm.equipmentIds.push(equipment.id);
             });
+
 
             $.validator.addMethod("validCustomer", function () {
                 return vm.customerId && vm.customerId !== 0;
             }, "Please select a valid customer.");
 
-            $.validator.addMethod("atLeastOneEquipment", function () {
+            $.validator.addMethod("atLeastEquipment", function () {
                 return vm.equipmentIds.length > 0;
             }, "Please select at least one equipment.");
 
@@ -111,5 +112,7 @@
                 }
             });
         });
+        
     </script>
+    }
 

@@ -20,14 +20,29 @@ namespace WinterStore.Controllers.api
             _context = new ApplicationDbContext();
         }
 
+        //// GET /api/customers
+        //public IEnumerable<CustomerDto> GetCustomers()
+        //{
+        //    return _context.Customers
+        //        .ToList()
+        //        .Select(Mapper.Map<Customer, CustomerDto>);
+        //}
+
         // GET /api/customers
-        public IEnumerable<CustomerDto> GetCustomers()
+        public IHttpActionResult GetCustomers(string query = null)
         {
-            return _context.Customers
+            IQueryable<Customer> customersQuery = _context.Customers;
+
+            if (!String.IsNullOrWhiteSpace(query))
+                customersQuery = customersQuery.Where(c => c.CustomerName.Contains(query));
+
+            var customerDtos = customersQuery
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
+
+            return Ok(customerDtos);
         }
-    
+
 
         // GET /api/customers/1
         public IHttpActionResult GetCustomer(int id)
