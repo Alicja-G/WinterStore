@@ -36,34 +36,34 @@ namespace WinterStore.Controllers
         }
 
         //Not implemented yet
-        public JsonResult GetSnowboard()
-        {
-            IQueryable<Equipment> snowboardEquipment = _context.Equipment
-                .Include(m => m.EquipmentType)
-                .Where(m => m.EquipmentType.EquipmentTypeTypeOfSport == "Snowboard");
+        //public JsonResult GetSnowboard()
+        //{
+        //    IQueryable<Equipment> snowboardEquipment = _context.Equipment
+        //        .Include(m => m.EquipmentType)
+        //        .Where(m => m.EquipmentType.EquipmentTypeTypeOfSport == "Snowboard");
                 
 
 
-            return Json(snowboardEquipment, JsonRequestBehavior.AllowGet);
-        }
+        //    return Json(snowboardEquipment, JsonRequestBehavior.AllowGet);
+        //}
 
-        //Not implemented yet
-        public JsonResult GetSkiing()
-        {
-            return Json();
-        }
+        ////Not implemented yet
+        //public JsonResult GetSkiing()
+        //{
+        //    return Json();
+        //}
 
-        //Not implemented yet
-        public JsonResult GetAdults()
-        {
-            return Json();
-        }
+        ////Not implemented yet
+        //public JsonResult GetAdults()
+        //{
+        //    return Json();
+        //}
 
-        //Not implemented yet
-        public JsonResult GetJunior()
-        {
-            return Json();
-        }
+        ////Not implemented yet
+        //public JsonResult GetJunior()
+        //{
+        //    return Json();
+        //}
 
 
 

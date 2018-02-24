@@ -9,6 +9,7 @@ namespace WinterStore.Controllers
     public class RentalsController : Controller
     {
         // GET: Rentals
+        [AllowAnonymous]
         public ActionResult New()
         {
             return View("AddRental");

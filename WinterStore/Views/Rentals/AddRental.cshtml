@@ -5,27 +5,35 @@
 
 <div class="container" id="equipmentcontainer">
     <h2>New Rental Form</h2>
+
     <form id="newRental">
+
+        
         <div class="form-group">
             <label>Customer</label>
             <div class="tt-container">
-                <input id="customer" name="customer" data-rule-validCustomer="true" required type="text" value="" class="form-control" />
+                <input id="customer" name="customer" data-rule-validCustomer="false" required type="text" value="" class="form-control" />
             </div>
         </div>
+
         <div class="form-group">
             <label>Equipment</label>
             <div class="tt-container">
-                <input id="equ" name="equ" data-rule-atLeastOneEquipment="true" type="text" value="" class="form-control" />
+                <input id="equ" name="equ" data-rule-atLeastOneEquipment="false" type="text" value="" class="form-control" />
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <ul id="equipment" class="list-group"></ul>
             </div>
         </div>
+
         <button class="btn btn-primary">Submit</button>
-    </form>
+</form>
     </div>
+  
+  
     @section scripts
 {
         @Scripts.Render("~/bundles/jqueryval")
@@ -33,6 +41,7 @@
             $(document).ready(function () {
 
                 var vm = {
+                   
                     equipmentIds: []
                 };
 
@@ -53,7 +62,7 @@
                     display: 'customerName',
                     source: customers
                 }).on("typeahead:select", function (e, customer) {
-                    vm.customerId = customer.Id;
+                    vm.customerId = customer.customerId;
                 });
 
                 var equipment = new Bloodhound({
@@ -85,7 +94,7 @@
                     return vm.customerId && vm.customerId !== 0;
                 }, "Please select a valid customer.");
 
-                $.validator.addMethod("atLeastEquipment", function () {
+                $.validator.addMethod("atLeastOneEquipment", function () {
                     return vm.equipmentIds.length > 0;
                 }, "Please select at least one equipment.");
 
