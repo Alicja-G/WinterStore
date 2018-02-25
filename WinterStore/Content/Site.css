@@ -115,3 +115,10 @@ textarea {
 
 
 }
+
+/*--------------NEW RENTAL FORM--------------*/
+#labelforcustomeraddrental, #labelforequipmentaddrental, #headerfornewrentalform{
+    color: #ffffff;
+}
+
+

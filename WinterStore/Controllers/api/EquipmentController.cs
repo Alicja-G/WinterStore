@@ -43,6 +43,21 @@ namespace WinterStore.Controllers.api
             return Ok(equipmentDtos);
         }
 
+        //[Route("equipment/snowboard")]
+        //public IHttpActionResult GetEquipmentSnowboard(string query = null)
+        //{
+        //    var equipmentQuery = _context.Equipment
+        //        .Include(c => c.EquipmentType)
+        //        .Where(c => c.EquipmentType.EquipmentTypeTypeOfSport=="Snowboard");
+
+            
+        //    var equipmentDtos = equipmentQuery
+        //        .ToList()
+        //        .Select(Mapper.Map<Equipment, EquipmentDto>);
+
+        //    return Ok(equipmentDtos);
+        //}
+
 
         // GET /api/equipment/1
         public IHttpActionResult GetEquipment(int id)

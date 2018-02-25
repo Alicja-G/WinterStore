@@ -4,20 +4,20 @@
 }
 
 <div class="container" id="equipmentcontainer">
-    <h2>New Rental Form</h2>
+    <h2 id="headerfornewrentalform">New Rental Form</h2>
 
     <form id="newRental">
 
-        
+
         <div class="form-group">
-            <label>Customer</label>
+            <label id="labelforcustomeraddrental">Customer</label>
             <div class="tt-container">
                 <input id="customer" name="customer" data-rule-validCustomer="false" required type="text" value="" class="form-control" />
             </div>
         </div>
 
         <div class="form-group">
-            <label>Equipment</label>
+            <label id="labelforequipmentaddrental">Equipment</label>
             <div class="tt-container">
                 <input id="equ" name="equ" data-rule-atLeastOneEquipment="false" type="text" value="" class="form-control" />
             </div>
@@ -29,8 +29,21 @@
             </div>
         </div>
 
-        <button class="btn btn-primary">Submit</button>
-</form>
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+
+
+
+            <div class="col-md-4 col-sm-4">
+                <p>
+                    @Html.ActionLink("Back to the list", "Index", "Rentals", null, new { @class = "btn btn-primary" })
+                </p>
+            </div>
+
+        </div>
+    </form>
     </div>
   
   

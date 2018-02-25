@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WinterStore.Models.Rental>
+
+@{
+    ViewBag.Title = "index of rentals";
+}
+
+<h1>ALL RENTALS:</h1>
+
+
+
+<div class="container" id="equipmentcontainer">
+    <table id="rentals" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Equipment</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <p>
+        @Html.ActionLink("Add rental", "New", "Rentals", null, new { @class = "btn btn-primary" })
+    </p>
+</div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#rentals").DataTable({
+                ajax: {
+                    url: "/api/NewRentals",
+                    dataSrc: ""
+                },
+                columns: [
+                    { data: "customer.customerName" },
+                    { data: "equipment.equipmentName"},
+                    {
+                       data: "id",
+                       render: function (data) {
+                           return "<button class='btn-link js-delete' data-rentals-id=" + data + ">Delete</button>";
+                       }
+                   }
+                        ]
+            });
+        });
+
+        $("#rentals").on("click", ".js-delete", function () {
+            var button = $(this);
+
+            bootbox.confirm("Are you sure you want to delete this equipment?", function (result) {
+                if (result) {
+                    $.ajax({
+                        url: "/api/equipment/" + button.attr("data-equipment-id"),
+                        method: "DELETE",
+                        success: function () {
+                            table.row(button.parents("tr")).remove().draw();
+                        }
+                    });
+                }
+            });
+        });
+
+
+    </script>
+}
+

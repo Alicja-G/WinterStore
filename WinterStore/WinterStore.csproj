@@ -601,6 +601,7 @@
     <Content Include="Views\Customers\AddOrEditCustomer.cshtml" />
     <Content Include="Views\Rentals\AddRental.cshtml" />
     <Content Include="Views\Equipment\Snowboard.cshtml" />
+    <Content Include="Views\Rentals\ListOfRentals.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
