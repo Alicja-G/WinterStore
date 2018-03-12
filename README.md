@@ -9,6 +9,8 @@ The application uses ASP.NET MVC, Entity Framework (Code-first approach), WEB AP
 
 For authorization purposes, not every user is able to view the whole application. 
 For all features there is a need to be logged as: admin@winterstore.com with password: Admin-111 . 
+(Due to testing purposes, this feature is curretly switched off)
+
 
 As I'm currently working on this project, it's not finished yet. 
 
@@ -16,9 +18,9 @@ Things that can be done as for now:
 - view/add/edit list of all equipment
 - view/add/edit list of all customers
 - view rental form 
+- enabling adding/editing rentals
 
 Things to do: 
-- enabling adding/editing rentals
 - adding views for seperate type of equipment
 - CSS styling
 - applying more roles to actions in controllers
