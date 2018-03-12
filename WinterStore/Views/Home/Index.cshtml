@@ -14,20 +14,20 @@
     <div class="row" >
         <div class="col-sm-12" id="para1">
            <p>
-               @*  "<a href='/movies/edit/" + movie.id + "'>" + movie.name + "</a>"; *@
+              
                Search for your @Html.ActionLink("Equipment", "Index", "Equipment") here.
      </p>
             <p>Would you like to go:</p>
 
            <table align="center" cellpadding="5" cellspacing="5" height="100" id="homepage">
                <tr>
-                   <td colspan="3">SNOWBOARDING?</td>
-                   <td colspan="3">SKIING?</td>
+                   <td colspan="3">@Html.ActionLink("SNOWBOARDING?", "Index", "Equipment")</td>
+                   <td colspan="3">@Html.ActionLink("SKIING?", "Index", "Equipment")</td>
                </tr>
                <tr>
-                   <td colspan="2">ADULT SECTION</td>
-                   <td colspan="2">JUNIOR SECTION</td>
-                   <td colspan="2">UNIVERSAL EQUIPMENT</td>
+                   <td colspan="2">@Html.ActionLink("ADULT SECTION", "Index", "Equipment")/td>
+                   <td colspan="2">@Html.ActionLink("JUNIOR SECTION", "Index", "Equipment")</td>
+                   <td colspan="2">>@Html.ActionLink("UNIVERSAL EQUIPMENT", "Index", "Equipment")</td>
                </tr>
                
 
